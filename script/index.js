@@ -5,10 +5,15 @@ topClose.addEventListener('click',()=>{
 });
 
 const bnrSwiper = new Swiper ('.bnr_swiper',{
-    /* autoplay:{delay:3000,}, */
+    autoplay:{delay:3000,},
+    speed:800,
     scrollbar:{
         el:'.swiper-scrollbar',
-        /* hide:true, */
+    },
+    clickable:true,
+    navigation:{
+        prevEl:'.bnr_swiper .prev',
+        nextEl:'.bnr_swiper .next',
     },
 })
 
@@ -28,6 +33,53 @@ newBtn.children[1].addEventListener('click',(e)=>{
     newShow2.style.display = 'none';
     newBtn.style.display = 'none',
     newMore.style.display = 'block';
+})
+
+const bestLink = document.querySelectorAll('.best_categories a');
+
+function removeBest() {
+    bestLink[0].classList.remove('active');
+    bestLink[1].classList.remove('active');
+    bestLink[2].classList.remove('active');
+    bestLink[3].classList.remove('active');
+    bestLink[4].classList.remove('active');
+    bestLink[5].classList.remove('active');
+    bestLink[6].classList.remove('active');
+}
+bestLink[0].addEventListener('click',(e)=>{
+    e.preventDefault();
+    removeBest();
+    bestLink[0].classList.add('active');
+})
+bestLink[1].addEventListener('click',(e)=>{
+    e.preventDefault();
+    removeBest();
+    bestLink[1].classList.add('active');
+})
+bestLink[2].addEventListener('click',(e)=>{
+    e.preventDefault();
+    removeBest();
+    bestLink[2].classList.add('active');
+})
+bestLink[3].addEventListener('click',(e)=>{
+    e.preventDefault();
+    removeBest();
+    bestLink[3].classList.add('active');
+})
+bestLink[4].addEventListener('click',(e)=>{
+    e.preventDefault();
+    removeBest();
+    bestLink[4].classList.add('active');
+})
+bestLink[5].addEventListener('click',(e)=>{
+    e.preventDefault();
+    removeBest();
+    bestLink[5].classList.add('active');
+})
+bestLink[6].addEventListener('click',(e)=>{
+    e.preventDefault();
+    removeBest();
+    bestLink[6].classList.add('active');
 })
 
 const bestMore = document.querySelector('.best_product > a');
@@ -113,4 +165,31 @@ collectList[2].addEventListener('click',(e)=>{
     collectList[2].classList.add('active');
     colTitle.innerHTML = '<h2>2024<br>SPRING & SUMMER COLLECTION</h2>';
 })
-console.log(colSwiper[0]);
+
+const memPik = document.querySelectorAll('.member');
+const memTxt = document.querySelectorAll('.mem_txt');
+
+memPik[0].addEventListener('mouseover',()=>{
+    memTxt[0].style.display ='block';
+})
+memPik[0].addEventListener('mouseout',()=>{
+    memTxt[0].style.display = 'none';
+})
+memPik[1].addEventListener('mouseover',()=>{
+    memTxt[1].style.display ='block';
+})
+memPik[1].addEventListener('mouseout',()=>{
+    memTxt[1].style.display = 'none';
+})
+memPik[2].addEventListener('mouseover',()=>{
+    memTxt[2].style.display ='block';
+})
+memPik[2].addEventListener('mouseout',()=>{
+    memTxt[2].style.display = 'none';
+})
+memPik[3].addEventListener('mouseover',()=>{
+    memTxt[3].style.display ='block';
+})
+memPik[3].addEventListener('mouseout',()=>{
+    memTxt[3].style.display = 'none';
+})
